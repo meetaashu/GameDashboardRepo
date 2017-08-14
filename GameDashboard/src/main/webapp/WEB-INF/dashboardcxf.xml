@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:jaxws="http://cxf.apache.org/jaxws"
+xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://cxf.apache.org/jaxrs
+http://cxf.apache.org/schemas/jaxrs.xsd
+http://cxf.apache.org/jaxws
+http://cxf.apache.org/schemas/jaxws.xsd">
+
+<import resource="classpath:META-INF/cxf/cxf.xml" />
+<import resource="classpath:META-INF/cxf/cxf-servlet.xml" /> 
+    
+    
+
+
+<!-- 
+ <bean id="footballScoringDashboardId" class="com.dashboard.service.FootballScoringDashboard"></bean>
+      <jaxrs:server id="footballrs" address="/service">
+        <jaxrs:serviceBeans>
+            <ref bean="footballScoringDashboardId"/>
+        </jaxrs:serviceBeans>
+        </jaxrs:server>
+ -->
+<bean id="hangmanGameId" class="com.dashboard.service.HangmanGame"></bean>
+      <jaxrs:server id="hangmanrs" address="/rservice">
+        <jaxrs:serviceBeans>
+            <ref bean="hangmanGameId"/>
+        </jaxrs:serviceBeans>
+        </jaxrs:server>
+
+   
+ </beans>
+    
+  
+
